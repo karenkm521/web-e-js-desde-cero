@@ -1,0 +1,16 @@
+console.log( typeof "redonda" )
+console.log ("El tipo de dato false es:", typeof false)
+console.log ("El tipo de dato 42 es:", typeof 42)
+console.log ("El tipo de dato Veinticinco es:", typeof "Veinticinco")
+console.log ("El tipo de dato -666 es:", typeof -666)
+console.log ("El tipo de dato true es:", typeof true)
+console.log ("El tipo de dato 0 es:", typeof 0)
+console.log ("El tipo de dato '' es:", typeof '')
+console.log ("El tipo de dato null es:", typeof null)
+console.log ("El tipo de dato undefined es:", typeof undefined)
+console.log ("El tipo de dato FALSE es:", typeof FALSE)
+console.log ("El tipo de dato 9.6 es:", typeof 9.6)
+console.log ("El tipo de dato  $:", typeof $)
+console.log ("El tipo de dato -9.6 es:", typeof -9.6)
+
+
