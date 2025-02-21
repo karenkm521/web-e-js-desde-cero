@@ -45,6 +45,7 @@ while (contador < frutas.length) {
             frutaEncontrada = true;
             break; 
         }
+        
     }
 
     if (frutaEncontrada===false) {
