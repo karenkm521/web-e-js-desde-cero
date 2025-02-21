@@ -11,11 +11,20 @@ const libro={
     autor:"kiera cass",
     anio:2012,
     estado:"prestado",
-    //this a
+    capitulos:["La Carta del Palacio","Un Nuevo Destino","Entre Sedas y Diamantes","El Primer Encuentro","Susurros en el Jardín"],
     describirLibro:function (){
-        return `Libro titulado ${this.titulo}, escrito por ${this.autor} en el año ${this.anio}, el estado es: ${this.estado}.`
-    } 
+        return `Libro titulado ${this.titulo}, escrito por ${this.autor} en el año ${this.anio}, el Estado es: ${this.estado}. 
+        Capitulos: ${this.capitulos}`
+    }, 
+    agregarCapitulo:function(capitulo){
+        this.capitulos.push(capitulo)
+    },
+    eliminarCapitulo:function(a){
+        this.capitulos.splice(a-1,1)
+    }
 }
+libro.agregarCapitulo("hola");
+libro.eliminarCapitulo(2);
 console.log(libro.describirLibro())
 const cajatTexto =document.getElementById ("infoLibro")
 function imprimir (){
