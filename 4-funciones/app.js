@@ -21,6 +21,8 @@ console.log( result )
 function agregarFruta (fruta){
     cajaDeFrutas.push(fruta)
     return fruta
+    o
+    return cajaDeFrutas.length
 }
 function mostrarFrutas (array){
     for (let i = 0; i < array.length; i++) {

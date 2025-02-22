@@ -23,7 +23,7 @@ const libro={
         this.capitulos.splice(a-1,1)
     }
 }
-libro.agregarCapitulo("hola");
+libro.agregarCapitulo("");
 libro.eliminarCapitulo(2);
 console.log(libro.describirLibro())
 const cajatTexto =document.getElementById ("infoLibro")
