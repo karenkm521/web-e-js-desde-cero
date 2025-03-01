@@ -1,0 +1,15 @@
+.addButton{
+    padding: 10px 35px;
+    border: none;
+    box-shadow: 2px 2px 2px #adadad;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.btn-blue{
+    background-color: rgb(207, 164, 247);
+    color: white;
+}
+.btn-pink{
+    background-color: rgb(247, 164, 219);
+    color: white;
+}

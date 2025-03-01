@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(255, 255, 255);
+}
+header{
+    background: radial-gradient(circle, rgba(158,149,206,1) 45%, rgba(129,118,186,1) 98%);
+    padding-top: 10px;
+    border-bottom: 2px solid white;
+}
+.bannerInicio{
+    display: flex;
+    justify-content: space-between;
+}
+.bannerInicio h1{
+    font-size: 3vh;
+    font-family: "Freeman", sans-serif;
+    color: aliceblue;
+    margin-bottom: 1%;
+}
+.bannerInicio img{
+    width: 6%;
+    margin: 15px 5% ;
+    height: 25px;
+    
+}
+.usuarios{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 2% 0%;
+}
+.usuarios h2{
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+}
+.boxUsuarios{
+    margin: auto;
+    display: flex;
+    padding: 3%;
+    justify-content: center;
+    background-color: aqua;
+    width: 30%;
+}
+.fotoPerfil{
+    height: 50px;
+    margin-right: 20%;
+}
+.fotoPerfil img{
+    border-radius:50%;
+    width: 150px;
+}
+.navbar-expand-lg{
+    background-color: blueviolet;
+}
+/*Tarjeta Comentario*/
+.cajaComentarios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.comentarios{
+    width: 40%;
+    display: flex;
+    padding: 3% 3% 1% 3%;
+    border-radius: 4%;
+    border: 2px solid #000000;
+    
+}
+.datosComentarios{
+    width: 450px;
+}
+.datosComentarios p{
+    min-height: 100px;
+    font-size: medium;
+}
+.datosComentarios h4{
+    padding-bottom: 4%;
+    border-bottom: 2px solid rgb(148, 147, 147);
+    font-size: small;
+    
+}
+.datosComentarios button{
+    margin-top: 2%;
+    border-radius: 45%;
+    padding: 2% 3%;
+    background-color: rgb(211, 223, 223);
+    cursor: pointer;
+}
+.datosComentarios button:hover{
+    background-color: rgb(75, 74, 74);
+}
+.fotoComentario{
+    width: 150px;
+    height: 150px;
+    border-radius:50%;
+    margin: 1%;
+    margin-left: 15%;
+}
