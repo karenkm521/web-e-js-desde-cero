@@ -15,10 +15,10 @@ header{
     justify-content: space-between;
 }
 .bannerInicio h1{
-    font-size: 3vh;
+    font-size: 4vh;
     font-family: "Freeman", sans-serif;
     color: aliceblue;
-    margin-bottom: 1%;
+    
 }
 .bannerInicio img{
     width: 6%;
@@ -28,75 +28,116 @@ header{
 }
 .usuarios{
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: 2% 0%;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 8%;
 }
-.usuarios h2{
+
+.contenedorComentarios{
+    width: 600px;
+    margin-left: 5%;
+}
+.contenedorComentarios form{
+    display: flex;
+    flex-direction: column;
+}
+.contenedorComentarios button{
+    background-color: rgb(132, 100, 163);
+    color: aliceblue;
+    width: 120px;
+    margin-top: 20px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: none;
+}
+.contenedorUsuarios{
+    width: 500px ;
+    text-align: center;
+} 
+.contenedorUsuarios h2{
     font-family: "Nunito", sans-serif;
     font-weight: 700;
+    font-size: large;
 }
+.contenedorUsuarios h3{
+    font-size: 3vh;
+}
+
 .boxUsuarios{
     margin: auto;
     display: flex;
     padding: 3%;
     justify-content: center;
-    background-color: aqua;
-    width: 30%;
 }
 .fotoPerfil{
     height: 50px;
-    margin-right: 20%;
+    margin-right: 10%;
 }
 .fotoPerfil img{
     border-radius:50%;
     width: 150px;
 }
 .navbar-expand-lg{
-    background-color: blueviolet;
+    background-color: rgb(132, 100, 163);
+    width: 120px;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 0 ;
+}
+.navbar-expand-lg a{
+    color: aliceblue;
+    margin-left: 12px;
+   
 }
 /*Tarjeta Comentario*/
 .cajaComentarios{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    
+    width: 100%;
+    flex-direction: column;
 }
 .comentarios{
-    width: 40%;
+    margin: auto;
     display: flex;
+    flex-direction: column;
+}
+.tarjetaComentarios{
+    display: flex;
+    margin-bottom: 8%;
+    width:600px ;
+    min-height: 250px;
+   
     padding: 3% 3% 1% 3%;
-    border-radius: 4%;
-    border: 2px solid #000000;
-    
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+
 }
 .datosComentarios{
     width: 450px;
 }
 .datosComentarios p{
-    min-height: 100px;
+    min-height: 150px;
+    max-width: 320px;
+    word-wrap: break-word; /* Rompe palabras largas */
+    overflow-wrap: break-word;
     font-size: medium;
+    font-family: "Ubuntu", sans-serif;
+    overflow-y: auto;
+    border-bottom: 2px solid rgb(148, 147, 147);
 }
 .datosComentarios h4{
-    padding-bottom: 4%;
-    border-bottom: 2px solid rgb(148, 147, 147);
     font-size: small;
+}
+.datosComentarios h5{
+    padding-bottom: 4%;
+    
+    font-size: x-small;
     
 }
-.datosComentarios button{
-    margin-top: 2%;
-    border-radius: 45%;
-    padding: 2% 3%;
-    background-color: rgb(211, 223, 223);
-    cursor: pointer;
-}
-.datosComentarios button:hover{
-    background-color: rgb(75, 74, 74);
-}
+
+
 .fotoComentario{
     width: 150px;
     height: 150px;
     border-radius:50%;
-    margin: 1%;
-    margin-left: 15%;
+    margin: 30px 10px 0px 15px;
 }

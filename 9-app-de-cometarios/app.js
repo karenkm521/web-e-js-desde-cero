@@ -1,8 +1,8 @@
 //Variable globales
-let nombreSeleccionado="";
+let nombreSeleccionado="Anonimo";
 const boxUsuarios= document.getElementById ("cajaUsuariosDesplegable")
 let nombreUsuarios=[
-    "Maria","Luis","Marce", "Veronica","Anonimo"
+    "Verónica","Erick","Jorge", "Irene","Anonimo"
 ]
 // 1.Funcion que llena el menu desplegable con los nombres de usuario
 function imprimirUsuarios(){
@@ -40,7 +40,7 @@ let comentar = (event) => {
     const hora= fecha.toLocaleTimeString()
     // 3.Creamos el objeto con la info del comentario
     const comment={
-            id:i++,
+            id:1+i++,
             date:hoy,
             hora:hora,
             comment:inputComment.value,
@@ -62,21 +62,18 @@ let printComent=(array) => {
         const{ id,date, comment, user,hora}= item
         console.log(comment,date,user)
         boxComments.innerHTML += `
-        
-        
+        <div class="tarjetaComentarios"> 
             <div class="datosComentarios">
                 <h3>${user} </h3>
                 <p>${comment}</p>
-                <h4>Comentario ${id} Publicado: ${date} a las ${hora}  </h4>
-                <button class="bi bi-trash3-fill"></button>
+                <h4># ${id}   </h4>
+                <h5> Publicado: ${date} a las ${hora}  </h4>
             </div>
             <img class="fotoComentario" src="imagenes/${user}.png" alt="">
-
-
-
+        </div>
     `
     });
 }
-
 btnComment.addEventListener("click",comentar)
+
 

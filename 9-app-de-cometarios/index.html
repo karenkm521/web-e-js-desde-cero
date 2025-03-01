@@ -19,13 +19,14 @@
     </header>
     <main>
         <section class="usuarios">
-            <h2>Usuarios</h2>
+            <div class="contenedorUsuarios">
+                <h2>Selecciona un Usuario/ Comenta como Anonimo</h2>
             <div class="boxUsuarios">
                 <div class="fotoPerfil">
                     <img id="fotoPerfil" src="imagenes/Anonimo.png" alt="">
                 </div>
                 <div class="">
-                    <h3 id="nombreSelect">Nombre</h3>
+                    <h3 id="nombreSelect">Anonimo</h3>
                     <nav class="navbar navbar-expand-lg">
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
@@ -41,9 +42,22 @@
                         </div>
                     </nav>
     
-                </div>
-                
+                </div> 
+            </div>
+               
 
+            </div>
+            <div  class="contenedorComentarios">
+                <h2>¡Suelta el chisme! 🔥🗣️</h2>
+                <p>
+                    Comparte esa historia que no puedes guardar más y descubre qué dicen los demás. 
+                    <br>¡Escribe tu chisme aquí! 👇
+                </p>
+                <form action="">
+                    <textarea  id="inputComentario" rows="3" cols="30"></textarea>
+                
+                    <button>Comentar</button>
+                </form>
             </div>
             
 
@@ -53,12 +67,8 @@
     
 
     <section class="cajaComentarios">
-        <form action="">
-            <input type="text" id="inputComentario">
-            <button>Comentar</button>
-        </form>
+       
         <div class="comentarios">
-
         </div>
     </section>
     
