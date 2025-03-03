@@ -141,3 +141,10 @@ header{
     border-radius:50%;
     margin: 30px 10px 0px 15px;
 }
+/*.datosComentarios button{
+    margin-top: 2%;
+    border-radius: 45%;
+    padding: 2% 3%;
+    background-color: rgb(211, 223, 223);
+    cursor: pointer;
+}

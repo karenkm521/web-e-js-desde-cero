@@ -22,8 +22,10 @@ const boxComments = document.getElementsByClassName("comentarios")[0]
 let comentar = (event) => {
     event.preventDefault() //Previene que se actualice el sitio al dar click en comentar
     console.log(inputComment.value)
-    boxComments.innerHTML += `<li>${inputComment.value}</li>`
+    boxComments.innerHTML += `<li>${inputComment.value}</li>
+    <button>Borrar</button>`
     inputComment.value = ""
 }
+
 
 btnComment.addEventListener("click",comentar)

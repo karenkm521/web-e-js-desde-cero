@@ -30,13 +30,15 @@ const utils = {
     },
     getCharsFromArray: function (array, num){
         let chars = ""
-        for (let i = 0; i <= num; i++) {
+        for (let i = 0; i < num; i++) {
             const randNumber = utils.generateRandomBetween(0, array.length-1)
-        
-            if (typeof array [randNumber]==="string"){
-                randNumber %2 ===0
-
+            
+            if( typeof array[randNumber] === "string"){
+                randNumber % 2 === 0 ? chars += array[randNumber].toLowerCase() : chars += array[randNumber].toUpperCase()
+            }else{
+                chars += array[randNumber]
             }
+
             
         }
         return chars
@@ -63,22 +65,32 @@ function generatePassword () {
     if(includeSymbols){
         tempPassword += utils.getCharsFromArray(symbols,utils.generateRandomBetween(3,passLength/3))
     }
-    //8. Añadir Letras a la tempPassword
-    tempPassword += utils.getCharsFromArray(letters, passLength- tempPassword.length)
-    //9. Para imprimir en pantalla una contraseña que alternee el orden de números, letras y simbolos
-    console.log (tempPassword.split("").sort(()=> Math.random()-0.5))
 
-    console.log(tempPassword)
-    passwordOutput.value = tempPassword
+    //8. Añadir letras a la tempPassword
+    tempPassword += utils.getCharsFromArray(letters, passLength - tempPassword.length)
+
+    //9. Para imprimir en pantalla una contraseña que alterne el orden de números, letras y símbolos
+
+    console.log( tempPassword.split("").sort( () => Math.random() - 0.5 ).join("") )
+
+    //console.log(tempPassword, passLength-tempPassword.length)
+
+    passwordOutput.value = tempPassword.split("").sort( () => Math.random() - 0.5 ).join("")
 
 }
 
 generateButton.addEventListener("click", generatePassword)
-//10 funcion para copiar la contraseña
-function copiarPassword(){
-    if(passwordOutput.value==="")return
-    const psCopy= passwordOutput.value
+
+
+//10. Función para copiar la contraseña
+
+function copiarPassword () {
+
+    
+    if( passwordOutput.value === "" ) return
+    
+    const psCopy = passwordOutput.value
     navigator.clipboard.writeText(psCopy)
 }
 
-copyButton.addEventListener("click", copiarPassword)
+copyButton.addEventListener("click",copiarPassword)

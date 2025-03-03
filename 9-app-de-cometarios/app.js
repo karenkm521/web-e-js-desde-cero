@@ -33,6 +33,10 @@ const comments=[]
 let i=0
 let comentar = (event) => {
     event.preventDefault() //Previene que se actualice el sitio al dar click en comentar
+    if (inputComment.value=== ""){
+        alert("Agrega un comentario");
+        return;
+    }; 
     // 1. Crear instancia de Date y guardarla en variable
     const fecha = new Date();
     // 2. Ejecutar método toDateString () para obtener formato de fecha
@@ -56,24 +60,44 @@ let comentar = (event) => {
     boxComments.innerHTML += `<li>${inputComment.value}</li>`
     */inputComment.value = ""
 }
-let printComent=(array) => {
-    boxComments.innerHTML=""
+let printComent = (array) => {
+    boxComments.innerHTML = "";
     array.forEach(item => {
-        const{ id,date, comment, user,hora}= item
-        console.log(comment,date,user)
+        const { id, date, comment, user, hora } = item;
+        console.log(comment, date, user);
         boxComments.innerHTML += `
-        <div class="tarjetaComentarios"> 
+        <div class="tarjetaComentarios" id="comentario${id}"> 
             <div class="datosComentarios">
-                <h3>${user} </h3>
+                <h3>${user}</h3>
                 <p>${comment}</p>
-                <h4># ${id}   </h4>
-                <h5> Publicado: ${date} a las ${hora}  </h4>
+                <h4>${id}</h4>
+                <h5>Publicado: ${date} a las ${hora}</h5>
+                <button class="botonOcultar" onclick="ocultarComentario(this)">Borrar</button>
             </div>
             <img class="fotoComentario" src="imagenes/${user}.png" alt="">
         </div>
-    `
+    `;
     });
+};
+
+// Evento para agregar comentario
+btnComment.addEventListener("click", comentar);
+
+// Función para ocultar un comentario
+function ocultarComentario(boton) {
+    let identificador = parseInt(boton.parentElement.querySelector("h4").textContent.trim()); 
+    let comentario = document.getElementById(`comentario${identificador}`);
+
+    if (comentario) {
+        comentario.style.display = "none";
+    }
+
+    // Encontrar índice del comentario en el array
+    let index = comments.findIndex(item => item.id === identificador);
+
+    if (index !== -1) {
+        comments.splice(index, 1); 
+        printComent(comments);
+    }
 }
-btnComment.addEventListener("click",comentar)
-
-
+    console.log(comments);
